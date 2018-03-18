@@ -26,6 +26,7 @@ class CustomAdapter (val users: List<Hero>): RecyclerView.Adapter<CustomAdapter.
             itemView?.tVrealname?.text = user.realname
             itemView?.tVteam?.text = user.team
             itemView?.tVimage?.text = user.imageurl
+            itemView?.tVstory?.text = user.bio
         }
     }
 
