@@ -38,21 +38,21 @@ class MainActivity : AppCompatActivity() {
 
         call.enqueue(object : Callback<List<Hero>> {
             override fun onResponse(call: Call<List<Hero>>, response: Response<List<Hero>>) {
-                val body = response?.body().toString()
+
+                val body = response?.body()
                 //See in logcat it will print all the data at website :)
                 println(body)
 
-                val gson = GsonBuilder().create()
+                val contacts: List<Hero> = response?.body()!!
 
-                gson.fromJson(body,)
+                //val gson = GsonBuilder().create()
+                //gson.fromJson(body, List(Hero))
 
-                val githubUserAdapter = CustomAdapter()
+                val githubUserAdapter = CustomAdapter(contacts)
 
                 recyclerView.layoutManager = LinearLayoutManager(baseContext)
 
                 recyclerView.adapter = githubUserAdapter
-
-
             }
 
             override fun onFailure(call: Call<List<Hero>>, t: Throwable) {

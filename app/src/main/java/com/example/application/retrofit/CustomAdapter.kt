@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_row.view.*
 
 
-class CustomAdapter (val users: ArrayList<Hero>): RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
+class CustomAdapter (val users: List<Hero>): RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
 
     override fun onBindViewHolder(holder: UserViewHolder?, position: Int) {
         holder?.bind(users[position])
