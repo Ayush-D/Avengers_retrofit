@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tVstory"
                 android:text="CANANDA"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 />
 
         </LinearLayout>

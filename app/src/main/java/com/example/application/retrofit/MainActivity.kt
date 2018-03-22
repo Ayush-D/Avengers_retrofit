@@ -38,10 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         call.enqueue(object : Callback<List<Hero>> {
             override fun onResponse(call: Call<List<Hero>>, response: Response<List<Hero>>) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 74bb98a0e1c8a65f12fc970ed5dbc8c662f9fb81
                 val body = response?.body()
                 //See in logcat it will print all the data at website :)
                 println(body)
@@ -56,10 +53,7 @@ class MainActivity : AppCompatActivity() {
                 recyclerView.layoutManager = LinearLayoutManager(baseContext)
 
                 recyclerView.adapter = githubUserAdapter
-<<<<<<< HEAD
-=======
 
->>>>>>> 74bb98a0e1c8a65f12fc970ed5dbc8c662f9fb81
             }
 
             override fun onFailure(call: Call<List<Hero>>, t: Throwable) {
