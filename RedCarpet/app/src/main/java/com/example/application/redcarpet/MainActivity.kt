@@ -14,9 +14,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import java.io.IOException
-import android.R.attr.data
-import android.R.attr.data
-import com.google.gson.Gson
 
 
 class MainActivity : AppCompatActivity() {
@@ -54,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
                 runOnUiThread {
                     recyclerView_main.layoutManager = LinearLayoutManager(baseContext)
-
                     recyclerView_main.adapter = MainAdapter(homeFeed)
                 }
             }
